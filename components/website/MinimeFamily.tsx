@@ -31,9 +31,9 @@ export default function MinimeFamily() {
                 backgroundSize: "30px 30px"
             }}>
 
-            {/* Main container with subtle grid background */}
+            {/* Main container */}
             <div className="w-[95%] sm:w-[90%] md:w-11/12 mx-auto">
-                {/* Title section with gradient text */}
+                {/* Title section */}
                 <div className="text-center mb-6 sm:mb-8 md:mb-12">
                     <h2 className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 text-transparent bg-clip-text p-1">
                         <span className="block sm:hidden">Introducing Minime 360!</span>
