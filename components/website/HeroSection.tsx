@@ -52,9 +52,9 @@ export function HeroSection() {
                                         src={image.src}
                                         alt={image.alt}
                                         className="w-full h-full object-cover"
-                                        width={1920} 
-                                        height={1080} 
-                                        priority={index === 0} 
+                                        width={1920}
+                                        height={900}
+                                        priority={index === 0}
                                     />
                                 </div>
 

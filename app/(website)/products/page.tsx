@@ -1,3 +1,4 @@
+import BannerImage from '@/components/website/BannerImage'
 import Image from 'next/image'
 import React from 'react'
 
@@ -71,15 +72,7 @@ export default function ProductPage() {
     return (
         <div>
             {/* First child: Banner image */}
-            <div className="relative w-full h-72 ">
-                <Image
-                    src="/banner.png"
-                    alt="Banner"
-                    layout="fill"
-                    objectFit="cover"
-                    priority
-                />
-            </div>
+            <BannerImage></BannerImage>
 
             {/* second child: */}
             <div className="w-11/12 mx-auto py-15">

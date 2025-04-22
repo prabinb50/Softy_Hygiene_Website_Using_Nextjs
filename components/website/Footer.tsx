@@ -17,18 +17,18 @@ export default function Footer() {
                 }}
             />
 
-            {/* Curved overlay shape */}
-            <div className="absolute top-0 left-0 right-0 h-40 z-10">
+            {/* Curved overlay shape - adds visual interest to the top of the footer */}
+            <div className="absolute top-0 left-0 right-0 h-20 sm:h-30 md:h-40 z-10">
                 <svg
                     viewBox="0 0 1440 200"
-                    className="w-full"
+                    className="w-full h-full"
                     style={{ fill: 'rgba(255,255,255,0.05)' }}
                 >
                     <path d="M0,128L1440,32L1440,0L0,0Z"></path>
                 </svg>
             </div>
 
-            {/* Subtle particle overlays for the background */}
+            {/* Subtle particle overlays for the background - adds texture */}
             <div
                 className="absolute inset-0 z-5"
                 style={{
@@ -37,74 +37,89 @@ export default function Footer() {
                 }}
             />
 
-            {/* Main content container */}
-            <div className="relative z-20 w-11/12 mx-auto py-15">
-                {/* Logo section */}
-                <div className="flex justify-center mb-16">
-                    <div className="w-28 h-28 rounded-full bg-purple-800 flex items-center justify-center p-1">
+            {/* Main content container  */}
+            <div className="relative z-20 w-[95%] sm:w-[90%] md:w-11/12 mx-auto py-8 sm:py-12 md:py-15">
+                {/* Logo section  */}
+                <div className="flex justify-center mb-8 sm:mb-12 md:mb-16">
+                    <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-full bg-purple-800 flex items-center justify-center p-1">
                         <div className="w-full h-full rounded-full bg-purple-800 flex items-center justify-center">
                             <Image
                                 src="/logo_1.png"
                                 alt="Softy Logo"
                                 width={80}
                                 height={80}
+                                className="w-[60%] h-[60%] sm:w-[70%] sm:h-[70%] md:w-[80%] md:h-[80%] object-contain"
                             />
                         </div>
                     </div>
                 </div>
 
                 {/* Footer content */}
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-5 text-white">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-white">
                     {/* Column 1 - Company Description */}
-                    <div className="text-center ">
-                        <h3 className="text-base font-semibold  mb-4">
+                    <div className="text-center sm:text-left">
+                        <h3 className="text-sm sm:text-base font-semibold mb-4 px-4 sm:px-0">
                             Your Trusted Partner in Personal Hygiene. You deserve a hygiene partner that works as hard as you do. Softy—quality you can trust, affordability you deserve.
                         </h3>
 
-                        {/* Social Media Icons */}
-                        <div className="flex justify-center md:justify-start space-x-4 mt-8">
-                            <Link href="#" className="bg-white rounded-full p-2 hover:opacity-80 transition-opacity">
-                                <Image src="/facebook.png" alt="Facebook" width={24} height={24} className="rounded-full object-cover" />
+                        {/* Social Media Icons  */}
+                        <div className="flex justify-center sm:justify-start space-x-2 sm:space-x-4 mt-6 sm:mt-8">
+                            {/* Facebook */}
+                            <Link href="#" className="bg-white rounded-full p-1.5 sm:p-2 hover:opacity-80 transition-opacity">
+                                <Image src="/facebook.png" alt="Facebook" width={24} height={24} className="w-5 h-5 sm:w-6 sm:h-6 rounded-full object-cover" />
                             </Link>
-                            <Link href="#" className="bg-white rounded-full p-2 hover:opacity-80 transition-opacity">
-                                <Image src="/messenger.png" alt="Messenger" width={24} height={24} className="rounded-full object-cover" />
+
+                            {/* Messenger */}
+                            <Link href="#" className="bg-white rounded-full p-1.5 sm:p-2 hover:opacity-80 transition-opacity">
+                                <Image src="/messenger.png" alt="Messenger" width={24} height={24} className="w-5 h-5 sm:w-6 sm:h-6 rounded-full object-cover" />
                             </Link>
-                            <Link href="#" className="bg-white rounded-full p-2 hover:opacity-80 transition-opacity">
-                                <Image src="/instagram.jpg" alt="Instagram" width={24} height={24} className="rounded-full object-cover" />
+
+                            {/* Instagram */}
+                            <Link href="#" className="bg-white rounded-full p-1.5 sm:p-2 hover:opacity-80 transition-opacity">
+                                <Image src="/instagram.jpg" alt="Instagram" width={24} height={24} className="w-5 h-5 sm:w-6 sm:h-6 rounded-full object-cover" />
                             </Link>
-                            <Link href="#" className="bg-white rounded-full p-2 hover:opacity-80 transition-opacity">
-                                <Image src="/whatsapp.png" alt="WhatsApp" width={24} height={24} className="rounded-full object-cover" />
+
+                            {/* WhatsApp */}
+                            <Link href="#" className="bg-white rounded-full p-1.5 sm:p-2 hover:opacity-80 transition-opacity">
+                                <Image src="/whatsapp.png" alt="WhatsApp" width={24} height={24} className="w-5 h-5 sm:w-6 sm:h-6 rounded-full object-cover" />
                             </Link>
-                            <Link href="#" className="bg-white rounded-full p-2 hover:opacity-80 transition-opacity">
-                                <Image src="/google.jpeg" alt="Google" width={24} height={24} className="rounded-full object-cover" />
+
+                            {/* Google */}
+                            <Link href="#" className="bg-white rounded-full p-1.5 sm:p-2 hover:opacity-80 transition-opacity">
+                                <Image src="/google.jpeg" alt="Google" width={24} height={24} className="w-5 h-5 sm:w-6 sm:h-6 rounded-full object-cover" />
                             </Link>
                         </div>
                     </div>
 
                     {/* Column 2 - Quick Links */}
-                    <div className="text-center">
-                        <h3 className="text-xl font-medium mb-6">Quick Links</h3>
-                        <ul className="space-y-4">
+                    <div className="text-center sm:text-left">
+                        <h3 className="text-lg sm:text-xl font-medium mb-4 sm:mb-6">Quick Links</h3>
+                        <ul className="space-y-3 sm:space-y-4">
+                            {/* Home Link */}
                             <li>
-                                <Link href="/" className="flex  items-center justify-center hover:underline">
+                                <Link href="/" className="flex items-center justify-center sm:justify-start hover:underline">
                                     Home
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 sm:h-4 sm:w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                     </svg>
                                 </Link>
                             </li>
+
+                            {/* Categories Link */}
                             <li>
-                                <Link href="/categories" className="flex  items-center justify-center hover:underline">
+                                <Link href="/categories" className="flex items-center justify-center sm:justify-start hover:underline">
                                     Categories
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 sm:h-4 sm:w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                     </svg>
                                 </Link>
                             </li>
+
+                            {/* Products Link */}
                             <li>
-                                <Link href="/products" className="flex  items-center justify-center hover:underline">
+                                <Link href="/products" className="flex items-center justify-center sm:justify-start hover:underline">
                                     Products
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 sm:h-4 sm:w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                     </svg>
                                 </Link>
@@ -113,29 +128,34 @@ export default function Footer() {
                     </div>
 
                     {/* Column 3 - Company Links */}
-                    <div className="text-center">
-                        <h3 className="text-xl font-medium mb-6">Company</h3>
-                        <ul className="space-y-4">
+                    <div className="text-center sm:text-left">
+                        <h3 className="text-lg sm:text-xl font-medium mb-4 sm:mb-6">Company</h3>
+                        <ul className="space-y-3 sm:space-y-4">
+                            {/* About Link */}
                             <li>
-                                <Link href="/about" className="flex  items-center justify-center hover:underline">
+                                <Link href="/about" className="flex items-center justify-center sm:justify-start hover:underline">
                                     About
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 sm:h-4 sm:w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                     </svg>
                                 </Link>
                             </li>
+
+                            {/* Contact Link */}
                             <li>
-                                <Link href="/contact" className="flex  items-center justify-center hover:underline">
+                                <Link href="/contact" className="flex items-center justify-center sm:justify-start hover:underline">
                                     Contact
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 sm:h-4 sm:w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                     </svg>
                                 </Link>
                             </li>
+
+                            {/* Dealer Locator Link */}
                             <li>
-                                <Link href="/dealer-locator" className="flex  items-center justify-center hover:underline">
+                                <Link href="/dealer-locator" className="flex items-center justify-center sm:justify-start hover:underline">
                                     Dealer Locator
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 sm:h-4 sm:w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                     </svg>
                                 </Link>
@@ -143,26 +163,22 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    {/* Column 3 - Company description section */}
-                    <div className=" text-white">
-                        {/* <p className="text-base font-semibold  leading-relaxed">
-                            "As action speaks louder than words."We SOFTY HYGIENE PVT.LTD. is one of the largest private level manufacturing company of disposable wet wipes, Baby wipes ,Baby Diaper, Sanitary Napkins and Tissue paper. We ensure feminine care and baby care for their safety and comfort. So, we specially manufacture our product in women and Baby base.
-                        </p> */}
-                        <p className="text-base font-semibold  leading-relaxed">
+                    {/* Column 4 - Extended Company description */}
+                    <div className="text-white text-center sm:text-left">
+                        <p className="text-sm sm:text-base font-semibold leading-relaxed px-4 sm:px-0">
                             &quot;As action speaks louder than words.&quot; We SOFTY HYGIENE PVT.LTD. is one of the largest private level manufacturing company of disposable wet wipes, Baby wipes, Baby Diaper, Sanitary Napkins and Tissue paper. We ensure feminine care and baby care for their safety and comfort. So, we specially manufacture our product in women and Baby base.
                         </p>
                     </div>
                 </div>
 
-                {/* Bottom copyright section */}
-                <div className="mt-16 pt-6 border-t border-white/20 text-white flex flex-col md:flex-row justify-between items-center">
-                    <div>
+                {/* Bottom copyright section*/}
+                <div className="mt-10 sm:mt-12 md:mt-16 pt-4 sm:pt-6 border-t border-white/20 text-white flex flex-col md:flex-row justify-between items-center">
+                    <div className="text-sm sm:text-base text-center md:text-left">
                         <p>© {currentYear} softy hygienic. All rights reserved.</p>
                     </div>
-                    <div className="mt-4 md:mt-0 flex items-center space-x-2">
+                    <div className="mt-3 md:mt-0 flex items-center space-x-1 sm:space-x-2 text-sm sm:text-base text-center">
                         <p>Designed and Developed by</p>
-                        <Link href="https://zyluxitsolution.com/" className="text-decoration-line: underline">Zylux IT Solution</Link>
-
+                        <Link href="https://zyluxitsolution.com/" className="underline hover:text-pink-200 transition-colors">Zylux IT Solution</Link>
                     </div>
                 </div>
             </div>
