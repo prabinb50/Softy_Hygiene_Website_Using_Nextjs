@@ -62,6 +62,7 @@ export function HeroSection() {
                         </CarouselItem>
                     ))}
                 </CarouselContent>
+
                 {/* Previous and Next buttons */}
                 <CarouselPrevious className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 text-white rounded-full p-2" />
                 <CarouselNext className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 text-white rounded-full p-2" />

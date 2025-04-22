@@ -95,7 +95,6 @@ export default function HygieneSection() {
                     </div>
                 </div>
             </div>
-
         </div>
     );
 }
