@@ -119,3 +119,5 @@ export default function Categories() {
         </div>
     );
 }
+
+// now make perfect responsive in each and every devices. also add the comments. 
