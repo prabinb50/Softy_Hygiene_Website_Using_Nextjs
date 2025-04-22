@@ -73,7 +73,7 @@ export default function HygieneSection() {
                                 strokeWidth={1.5}
                                 className="text-purple-700"
                             />
-                            <p className="font-semibold  text-sm">
+                            <p className="font-semibold text-sm">
                                 Nepal&apos;s No.1 Hygiene Brand
                             </p>
                         </div>
@@ -89,7 +89,9 @@ export default function HygieneSection() {
 
                     <div className=" bg-white rounded-lg border p-4 flex items-center justify-end w-max gap-2 shadow-lg ">
                         <FaBoxTissue size={20} className="text-purple-800" />
-                        <p className="font-semibold opacity-80 text-sm">Nepal's No.1 Hygiene Brand</p>
+                        <p className="font-semibold opacity-80 text-sm">
+                            Nepal&apos;s No.1 Hygiene Brand
+                        </p>
                     </div>
                 </div>
             </div>

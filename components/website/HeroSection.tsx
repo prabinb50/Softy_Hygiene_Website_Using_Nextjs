@@ -8,6 +8,7 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from "@/components/ui/carousel";
+import Image from "next/image";
 
 export function HeroSection() {
     // Autoplay plugin for the carousel
@@ -47,10 +48,13 @@ export function HeroSection() {
                             <div className="relative ">
                                 {/* Image */}
                                 <div className="aspect-w-16 aspect-h-9">
-                                    <img
+                                    <Image
                                         src={image.src}
                                         alt={image.alt}
-                                        className="w-full h-full object-cover "
+                                        className="w-full h-full object-cover"
+                                        width={1920} 
+                                        height={1080} 
+                                        priority={index === 0} 
                                     />
                                 </div>
 
