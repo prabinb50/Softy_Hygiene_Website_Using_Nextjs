@@ -68,46 +68,47 @@ export default function Categories() {
                             className="pl-2 sm:pl-4 basis-full xs:basis-1/2 sm:basis-1/2 md:basis-1/2 lg:basis-1/4"
                         >
                             {/* Category card with hover effects */}
-                            <Card className="rounded-md bg-gradient-to-r from-purple-100 via-pink-100 to-purple-100 border-none cursor-pointer group">
-                                <CardContent className="p-2 sm:px-3 md:p-4">
-                                    {/* Image container  */}
-                                    <div className="bg-white rounded-md overflow-hidden shadow-md">
-                                        <Image
-                                            src={category.image}
-                                            alt={category.name}
-                                            width={300}
-                                            height={300}
-                                            className="w-full h-48 sm:h-56 md:h-64 object-cover transition-transform hover:scale-105 duration-300"
-                                            loading="lazy"
-                                        />
-                                    </div>
+                            <Link href={"/categories"}>
+                                <Card className="rounded-md bg-gradient-to-r from-purple-100 via-pink-100 to-purple-100 border-none cursor-pointer group">
+                                    <CardContent className="p-2 sm:px-3 md:p-4">
+                                        {/* Image container  */}
+                                        <div className="bg-white rounded-md overflow-hidden shadow-md">
+                                            <Image
+                                                src={category.image}
+                                                alt={category.name}
+                                                width={300}
+                                                height={300}
+                                                className="w-full h-48 sm:h-56 md:h-64 object-cover transition-transform hover:scale-105 duration-300"
+                                                loading="lazy"
+                                            />
+                                        </div>
 
-                                    {/* Category title and link  */}
-                                    <div className="px-1 sm:px-2 mt-3 sm:mt-4">
-                                        <h3 className="text-base sm:text-lg text-gray-700 font-medium group-hover:translate-x-2 duration-200">
-                                            {category.name}
-                                        </h3>
-                                        <Link
-                                            href={`/categories/${category.slug}`}
-                                            className="flex items-center text-gray-600 hover:text-purple-600 font-semibold text-xs sm:text-sm group"
-                                        >
-                                            <span>View Category</span>
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                className="h-4 w-4 sm:h-5 sm:w-5 ml-1 mt-1 group-hover:translate-x-2 duration-200"
-                                                viewBox="0 0 20 20"
-                                                fill="currentColor"
+                                        {/* Category title and link  */}
+                                        <div className="px-1 sm:px-2 mt-3 sm:mt-4">
+                                            <h3 className="text-base sm:text-lg text-gray-700 font-medium group-hover:translate-x-2 duration-200">
+                                                {category.name}
+                                            </h3>
+                                            <div
+                                                className="flex items-center text-gray-600 hover:text-purple-600 font-semibold text-xs sm:text-sm group"
                                             >
-                                                <path
-                                                    fillRule="evenodd"
-                                                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                                                    clipRule="evenodd"
-                                                />
-                                            </svg>
-                                        </Link>
-                                    </div>
-                                </CardContent>
-                            </Card>
+                                                <span>View Category</span>
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    className="h-4 w-4 sm:h-5 sm:w-5 ml-1 mt-1 group-hover:translate-x-2 duration-200"
+                                                    viewBox="0 0 20 20"
+                                                    fill="currentColor"
+                                                >
+                                                    <path
+                                                        fillRule="evenodd"
+                                                        d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                                        clipRule="evenodd"
+                                                    />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </CardContent>
+                                </Card></Link>
+
                         </CarouselItem>
                     ))}
                 </CarouselContent>
@@ -120,4 +121,3 @@ export default function Categories() {
     );
 }
 
-// now make perfect responsive in each and every devices. also add the comments. 
