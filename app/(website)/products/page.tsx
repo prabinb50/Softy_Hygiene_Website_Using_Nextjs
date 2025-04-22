@@ -105,7 +105,7 @@ export default function ProductPage() {
                                     alt={product.name}
                                     width={300}
                                     height={300}
-                                    className="w-full h-64 object-cover overflow-hidden transition-transform hover:scale-108 duration-300 "
+                                    className="w-full px-4 sm:px-6 md:px-8  h-64 object-cover overflow-hidden transition-transform hover:scale-108 duration-300"
                                     loading='lazy'
                                 />
                             </div>
