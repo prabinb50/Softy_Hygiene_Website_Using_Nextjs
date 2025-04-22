@@ -30,12 +30,12 @@ const items = [
 
 export default function HygieneSection() {
     return (
-        <div className=" w-full  border-t border-purple-200 bg-purple-50 bg-opacity-50 relative "
+        <div className=" w-full border-t border-purple-200 bg-purple-50 bg-opacity-50 relative "
             style={{
                 backgroundImage: "linear-gradient(#e5e5e5 1px, transparent 1px), linear-gradient(90deg, #e5e5e5 1px, transparent 1px)",
                 backgroundSize: "30px 30px"
             }}>
-            <div className="w-11/12 mx-auto lg:flex gap-4 py-15 space-y-16">
+            <div className="w-11/12 mx-auto lg:flex gap-4 py-15 ">
                 {/* Left side */}
                 <div className="lg:w-1/2 space-y-8 ">
                     <p className=" bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 text-transparent bg-clip-text font-semibold">

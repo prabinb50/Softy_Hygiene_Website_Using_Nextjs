@@ -19,7 +19,7 @@ interface AdvantageItemProps {
 // Advantage Item Component
 const AdvantageItem = ({ icon, bgColor, title, description }: AdvantageItemProps) => {
     return (
-        <div className="bg-white bg-opacity-90 rounded-lg p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 ease-in-out cursor-pointer">
+        <div className="bg-opacity-90 rounded-lg p-8 shadow-sm hover:shadow-lg transition-shadow duration-300 ease-in-out cursor-pointer bg-white" >
             <div className={`${bgColor} w-14 h-14 rounded-lg flex items-center justify-center mb-5`}>
                 {icon}
             </div>

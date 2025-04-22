@@ -51,12 +51,12 @@ export default function Categories() {
             </div>
 
             {/* second child - categories carousel */}
-            <Carousel className=" ">
+            <Carousel className="">
                 <CarouselContent className="-ml-4">
                     {categories.map((category) => (
                         <CarouselItem key={category.id} className="pl-4 md:basis-1/2 lg:basis-1/4">
                             <div className=" ">
-                                <Card className="rounded-md bg-pink-50 border-none cursor-pointer  group">
+                                <Card className="rounded-md bg-gradient-to-r from-purple-100 via-pink-100 to-purple-100 border-none cursor-pointer  group">
                                     <CardContent className="px-3  ">
                                         <div className=" bg-white rounded-md overflow-hidden shadow-md ">
                                             <Image
@@ -83,8 +83,8 @@ export default function Categories() {
                         </CarouselItem>
                     ))}
                 </CarouselContent>
-                <CarouselPrevious className="absolute -left-6 top-1/2 transform -translate-y-1/2 bg-pink-100 text-pink-500 border-none" />
-                <CarouselNext className="absolute -right-6 top-1/2 transform -translate-y-1/2 bg-pink-100 text-pink-500 border-none" />
+                <CarouselPrevious className="absolute -left-8 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 text-white border-none" />
+                <CarouselNext className="absolute -right-8 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 text-white border-none" />
             </Carousel>
         </div>
     );
