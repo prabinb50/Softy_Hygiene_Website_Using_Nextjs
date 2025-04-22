@@ -6,7 +6,7 @@ export default function CategoriesPage() {
     return (
         <div>
             {/* First child: Banner image */}
-            <div className="relative w-full h-72 mb-5">
+            <div className="relative w-full h-72 ">
                 <Image
                     src="/banner.png"
                     alt="Banner"
