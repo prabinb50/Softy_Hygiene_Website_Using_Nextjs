@@ -5,7 +5,7 @@ import { FaBoxTissue } from "react-icons/fa";
 
 // Interface for hygiene product items
 interface HygieneProductItem {
-    icon: React.ComponentType<any>;
+    icon: React.ElementType;
     title: string;
     description: string;
 }
