@@ -39,7 +39,7 @@ export default function HygieneSection() {
                 {/* Left side */}
                 <div className="lg:w-1/2 space-y-8 ">
                     <p className=" bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 text-transparent bg-clip-text font-semibold">
-                        Nepal's No.1 Hygiene Brand
+                        Nepal&apos;s No.1 Hygiene Brand
                     </p>
                     <div className="space-y-4">
                         <h1 className="text-4xl font-bold bg-gradient-to-r  from-purple-600 to-pink-500 text-transparent bg-clip-text h-12">
@@ -74,7 +74,7 @@ export default function HygieneSection() {
                                 className="text-purple-700"
                             />
                             <p className="font-semibold  text-sm">
-                                No 1 in Personal hygienic
+                                Nepal&apos;s No.1 Hygiene Brand
                             </p>
                         </div>
 
