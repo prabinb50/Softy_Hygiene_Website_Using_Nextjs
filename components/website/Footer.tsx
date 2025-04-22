@@ -1,8 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Facebook, MessageCircle, Instagram, Phone } from 'lucide-react';
-import { FaWhatsapp } from 'react-icons/fa';
 
 export default function Footer() {
     // Current year for copyright

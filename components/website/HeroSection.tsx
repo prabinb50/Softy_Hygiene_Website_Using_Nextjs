@@ -1,8 +1,6 @@
 "use client";
 import * as React from "react";
 import Autoplay from "embla-carousel-autoplay";
-
-import { Card, CardContent } from "@/components/ui/card";
 import {
     Carousel,
     CarouselContent,
@@ -11,7 +9,6 @@ import {
     CarouselPrevious,
 } from "@/components/ui/carousel";
 
-// HeroSection component to replicate the provided UI
 export function HeroSection() {
     // Autoplay plugin for the carousel
     const plugin = React.useRef(
