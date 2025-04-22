@@ -32,13 +32,13 @@ export default function ImpOfHygieneSolution() {
         <div className="w-full py-15  bg-slate-50">
             <div className="w-11/12 mx-auto space-y-12">
                 {/* Header section */}
-                <div className="text-center space-y-1 xl:px-74 lg:px-52 md:px-32 sm:px-22 ">
-                    <p className="md:text-4xl font-semibold text-2xl bg-gradient-to-r md:h-12 from-purple-600 to-pink-500 text-transparent bg-clip-text">
+                <div className="text-center ">
+                    <h1 className="text-4xl font-bold mb-2 bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 text-transparent bg-clip-text p-1">
                         Why to Choose Softy Hygiene Pvt. Ltd
-                    </p>
-                    <p className="md:text-lg opacity-60 ">
+                    </h1>
+                    <p className="text-gray-600 text-lg max-w-3xl mx-auto">
                         We SOFTY HYGIENE PVT.LTD. are one of the largest private level
-                        manufacturing of disposable wet wipes, Baby wipes ,Baby Diaper,
+                        manufacturing of disposable wet wipes, Baby wipes, Baby Diaper,
                         Sanitary Napkins and Tissue paper.
                     </p>
                 </div>

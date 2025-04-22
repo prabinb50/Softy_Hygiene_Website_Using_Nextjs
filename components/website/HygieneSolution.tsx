@@ -38,13 +38,13 @@ export default function HygieneSection() {
             <div className="w-11/12 mx-auto lg:flex gap-4 py-15 space-y-16">
                 {/* Left side */}
                 <div className="lg:w-1/2 space-y-8 ">
-                    <p className="font-semibold  bg-gradient-to-r from-purple-600 to-pink-500 text-transparent bg-clip-text">
+                    <p className=" bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 text-transparent bg-clip-text font-semibold">
                         Nepal's No.1 Hygiene Brand
                     </p>
                     <div className="space-y-4">
-                        <p className="md:text-4xl font-bold text-2xl bg-gradient-to-r md:h-12 from-purple-600 to-pink-500 text-transparent bg-clip-text">
+                        <h1 className="text-4xl font-bold bg-gradient-to-r  from-purple-600 to-pink-500 text-transparent bg-clip-text h-12">
                             Innovating Hygiene Solutions
-                        </p>
+                        </h1>
                         <p className="text-base opacity-90 ">
                             High-quality, safe, and hygienic products designed for the
                             well-being of women, children, and families.

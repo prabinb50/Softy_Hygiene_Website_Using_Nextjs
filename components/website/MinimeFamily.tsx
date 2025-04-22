@@ -35,10 +35,10 @@ export default function MinimeFamily() {
             <div className="w-11/12 mx-auto ">
                 {/* Title section with gradient text */}
                 <div className="text-center mb-12">
-                    <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 text-transparent bg-clip-text ">
+                    <h2 className="text-4xl font-bold mb-2 bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 text-transparent bg-clip-text p-1">
                         Introducing our latest addition to the <br></br>Minime family - the Minime 360!
                     </h2>
-                    <p className="text-gray-700 text-lg">
+                    <p className="text-gray-600 text-lg">
                         Introducing our latest addition to the Minime family - the Minime 360!
                     </p>
                 </div>

@@ -44,7 +44,7 @@ export default function Categories() {
         <div className="py-15 w-11/12 mx-auto">
             {/* first child - heading section */}
             <div className="text-center mb-12">
-                <h1 className="text-4xl font-semibold mb-4 text-pink-500">Explore Our Categories</h1>
+                <h1 className="text-4xl font-bold mb-2 bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 text-transparent bg-clip-text p-1">Explore Our Categories</h1>
                 <p className="text-gray-600 text-lg max-w-3xl mx-auto">
                     Discover the wide range of products we offer for your personal and professional hygiene needs.
                 </p>

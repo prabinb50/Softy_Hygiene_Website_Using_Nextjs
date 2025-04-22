@@ -89,10 +89,7 @@ export default function SoftyHygiene() {
             {/* Header section */}
             <div className='w-11/12 mx-auto'>
                 <div className="text-center mb-14 ">
-                    <h2 className="text-4xl font-bold mb-3">
-                        <span className="text-purple-700">Discover the </span>
-                        <span className="text-pink-500">Softy Hygiene Advantage</span>
-                    </h2>
+                    <h1 className="text-4xl font-bold mb-2 bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 text-transparent bg-clip-text p-1">Discover the Softy Hygiene Advantage</h1>
                     <p className="text-gray-600 text-lg max-w-3xl mx-auto">
                         Delivering innovative and high-quality hygiene solutions for every home and business.
                     </p>
