@@ -5,18 +5,18 @@ import { MapPin, Mail, Phone } from 'lucide-react';
 export default function ContactPage() {
     return (
         <div>
-            {/* banner image  */}
-            <div>
+            {/* First child: Banner image */}
+            <div className="relative w-full h-72 mb-5">
                 <Image
-                    src={"/banner.png"}
-                    alt='Banner Image'
-                    width={1000}
-                    height={1000}
-                    className='object-cover w-full '
-                    loading='lazy'
+                    src="/banner.png"
+                    alt="Banner"
+                    layout="fill"
+                    objectFit="cover"
+                    priority
                 />
             </div>
 
+            {/* second child */}
             <div className='w-11/12 mx-auto py-15'>
                 {/* Title section with gradient text */}
                 <div className="text-center mb-12">
@@ -52,6 +52,7 @@ export default function ContactPage() {
                             <div className=''>
                                 <h4 className="text-gray-700 font-medium mb-1">Our office</h4>
 
+                                {/* Office address with icon */}
                                 <div className='flex items-center mt-4'>
                                     <div className="bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 p-2 rounded-full mr-3">
                                         <MapPin className="h-3 w-3 text-white" />
@@ -64,6 +65,7 @@ export default function ContactPage() {
                             <div>
                                 <h4 className="text-gray-700 font-medium mb-1">Email</h4>
 
+                                {/* Email address with icon */}
                                 <div className='flex items-center mt-4 '>
                                     <div className="bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 p-2 rounded-full mr-3">
                                         <Mail className="h-3 w-3 text-white" />
@@ -76,12 +78,12 @@ export default function ContactPage() {
                             <div>
                                 <h4 className="text-gray-700 font-medium mb-1">Phone</h4>
 
+                                {/* Phone number with icon */}
                                 <div className='flex items-center mt-4 '>
                                     <div className="bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 p-2 rounded-full mr-3">
                                         <Phone className="h-3 w-3 text-white" />
                                     </div>
                                     <p className="text-gray-600 hover:bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 hover:text-transparent hover:bg-clip-text cursor-pointer">+01-5191390</p>
-
                                 </div>
                             </div>
                         </div>

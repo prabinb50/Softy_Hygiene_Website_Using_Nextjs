@@ -5,19 +5,19 @@ import React from 'react'
 export default function CategoriesPage() {
     return (
         <div>
-            {/* first child: banner image */}
-            <div>
+            {/* First child: Banner image */}
+            <div className="relative w-full h-72 mb-5">
                 <Image
-                    src={"/banner.png"}
-                    alt='Banner Image'
-                    width={1000}
-                    height={1000}
-                    className='object-cover w-full '
-                    loading='lazy'
+                    src="/banner.png"
+                    alt="Banner"
+                    layout="fill"
+                    objectFit="cover"
+                    priority
                 />
             </div>
 
-            {/* second child: */}
+
+            {/* Second child: Categories section */}
             <Categories></Categories>
         </div>
     )
