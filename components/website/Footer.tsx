@@ -66,19 +66,19 @@ export default function Footer() {
                         {/* Social Media Icons */}
                         <div className="flex justify-center md:justify-start space-x-4 mt-8">
                             <Link href="#" className="bg-white rounded-full p-2 hover:opacity-80 transition-opacity">
-                                <Facebook size={24} className="text-blue-600" />
+                                <Image src="/facebook.png" alt="Facebook" width={24} height={24} className="rounded-full object-cover" />
                             </Link>
                             <Link href="#" className="bg-white rounded-full p-2 hover:opacity-80 transition-opacity">
-                                <MessageCircle size={24} className="text-blue-500" />
+                                <Image src="/messenger.png" alt="Messenger" width={24} height={24} className="rounded-full object-cover" />
                             </Link>
                             <Link href="#" className="bg-white rounded-full p-2 hover:opacity-80 transition-opacity">
-                                <Instagram size={24} className="text-pink-600" />
+                                <Image src="/instagram.jpg" alt="Instagram" width={24} height={24} className="rounded-full object-cover" />
                             </Link>
                             <Link href="#" className="bg-white rounded-full p-2 hover:opacity-80 transition-opacity">
-                                <FaWhatsapp size={24} className="text-green-500" />
+                                <Image src="/whatsapp.png" alt="WhatsApp" width={24} height={24} className="rounded-full object-cover" />
                             </Link>
                             <Link href="#" className="bg-white rounded-full p-2 hover:opacity-80 transition-opacity">
-                                <Phone size={24} className="text-yellow-500" />
+                                <Image src="/google.jpeg" alt="Google" width={24} height={24} className="rounded-full object-cover" />
                             </Link>
                         </div>
                     </div>
@@ -88,7 +88,7 @@ export default function Footer() {
                         <h3 className="text-xl font-medium mb-6">Quick Links</h3>
                         <ul className="space-y-4">
                             <li>
-                                <Link href="#" className="flex  items-center justify-center hover:underline">
+                                <Link href="/" className="flex  items-center justify-center hover:underline">
                                     Home
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -96,7 +96,7 @@ export default function Footer() {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#" className="flex  items-center justify-center hover:underline">
+                                <Link href="/categories" className="flex  items-center justify-center hover:underline">
                                     Categories
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -104,7 +104,7 @@ export default function Footer() {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#" className="flex  items-center justify-center hover:underline">
+                                <Link href="/products" className="flex  items-center justify-center hover:underline">
                                     Products
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -119,7 +119,7 @@ export default function Footer() {
                         <h3 className="text-xl font-medium mb-6">Company</h3>
                         <ul className="space-y-4">
                             <li>
-                                <Link href="#" className="flex  items-center justify-center hover:underline">
+                                <Link href="/about" className="flex  items-center justify-center hover:underline">
                                     About
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -127,7 +127,7 @@ export default function Footer() {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#" className="flex  items-center justify-center hover:underline">
+                                <Link href="/contact" className="flex  items-center justify-center hover:underline">
                                     Contact
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -135,7 +135,7 @@ export default function Footer() {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#" className="flex  items-center justify-center hover:underline">
+                                <Link href="/dealer-locator" className="flex  items-center justify-center hover:underline">
                                     Dealer Locator
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -154,12 +154,14 @@ export default function Footer() {
                 </div>
 
                 {/* Bottom copyright section */}
-                <div className="mt-16 pt-6 border-t border-white/20 text-white/70 flex flex-col md:flex-row justify-between items-center">
+                <div className="mt-16 pt-6 border-t border-white/20 text-white flex flex-col md:flex-row justify-between items-center">
                     <div>
                         <p>© {currentYear} softy hygienic. All rights reserved.</p>
                     </div>
-                    <div className="mt-4 md:mt-0">
-                        <p>Designed and Developed by Zylux IT Solution</p>
+                    <div className="mt-4 md:mt-0 flex items-center space-x-2">
+                        <p>Designed and Developed by</p>
+                        <Link href="https://zyluxitsolution.com/" className="text-decoration-line: underline">Zylux IT Solution</Link>
+
                     </div>
                 </div>
             </div>
