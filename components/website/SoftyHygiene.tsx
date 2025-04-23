@@ -7,7 +7,7 @@ import {
     Phone,
     Target
 } from 'lucide-react';
-import { AnimatedCard, AnimatedText, AnimatedFade } from '@/components/website/AnimationComponents';
+import { AnimatedCard, AnimatedText } from '@/components/website/AnimationComponents';
 
 // Interface for advantage item props
 interface AdvantageItemProps {
