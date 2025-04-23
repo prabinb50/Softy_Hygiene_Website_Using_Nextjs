@@ -7,6 +7,7 @@ import {
     Phone,
     Target
 } from 'lucide-react';
+import { AnimatedCard, AnimatedText, AnimatedFade } from '@/components/website/AnimationComponents';
 
 // Interface for advantage item props
 interface AdvantageItemProps {
@@ -68,7 +69,7 @@ export default function SoftyHygiene() {
             icon: <Phone className="text-pink-500" size={24} />,
             bgColor: "bg-pink-100",
             title: "Dedicated Customer Support",
-            description: "Reach us at +01-5191390 or softy.corporate@gmail.com for queries and feedback. Located in Maitighar, Kathmandu."
+            description: "Reach us at +01-5191390 or softy.corporate@gmail.com for queries and feedback. Located in Maitighar."
         },
         {
             id: 6,
@@ -89,22 +90,27 @@ export default function SoftyHygiene() {
             {/* Header section */}
             <div className='w-11/12 max-w-[1400px] mx-auto  '>
                 <div className="text-center mb-8 sm:mb-10 md:mb-14">
-                    <h1 className="text-3xl sm:text-4xl font-bold mb-2 bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 text-transparent bg-clip-text p-1">Discover the Softy Hygiene Advantage</h1>
-                    <p className="text-gray-600 text-base sm:text-lg max-w-3xl mx-auto px-2">
-                        Delivering innovative and high-quality hygiene solutions for every home and business.
-                    </p>
+                    <AnimatedText>
+                        <h1 className="text-3xl sm:text-4xl font-bold mb-2 bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 text-transparent bg-clip-text p-1">Discover the Softy Hygiene Advantage</h1>
+                    </AnimatedText>
+                    <AnimatedText delay={0.2}>
+                        <p className="text-gray-600 text-base sm:text-lg max-w-3xl mx-auto px-2">
+                            Delivering innovative and high-quality hygiene solutions for every home and business.
+                        </p>
+                    </AnimatedText>
                 </div>
 
                 {/* Advantages grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6 max-w-7xl mx-auto">
-                    {advantageItems.map((item) => (
-                        <AdvantageItem
-                            key={item.id}
-                            icon={item.icon}
-                            bgColor={item.bgColor}
-                            title={item.title}
-                            description={item.description}
-                        />
+                    {advantageItems.map((item, index) => (
+                        <AnimatedCard key={item.id} delay={0.3 + (index * 0.1)}>
+                            <AdvantageItem
+                                icon={item.icon}
+                                bgColor={item.bgColor}
+                                title={item.title}
+                                description={item.description}
+                            />
+                        </AnimatedCard>
                     ))}
                 </div>
             </div>

@@ -1,4 +1,3 @@
-"use client";
 import React from 'react';
 import { MapPin, Mail, Phone } from 'lucide-react';
 import BannerImage from '@/components/website/BannerImage';
