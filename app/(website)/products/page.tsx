@@ -2,7 +2,7 @@
 import { AnimatedCard, AnimatedText } from '@/components/website/AnimationComponents';
 import BannerImage from '@/components/website/BannerImage'
 import Image from 'next/image'
-import React, { useEffect } from 'react'
+import React from 'react'
 
 // Define an interface for product data
 interface Product {
