@@ -1,4 +1,5 @@
 "use client"
+import { AnimatedText } from '@/components/website/AnimationComponents';
 import BannerImage from '@/components/website/BannerImage';
 import { DealerList } from '@/components/website/DealerList';
 import { DealerMap } from '@/components/website/DealerMap';
@@ -89,12 +90,15 @@ export default function DealerLocatorPage() {
             {/* Main Content Area */}
             <div className="w-full sm:w-11/12 mx-auto py-8 sm:py-12 md:py-15 px-3 sm:px-0">
                 <div className="text-center mb-8 sm:mb-12">
-                    <h1 className="text-3xl sm:text-4xl font-bold mb-2 bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 text-transparent bg-clip-text p-1">
-                        Find Our Nearest Dealers
-                    </h1>
-                    <p className="text-gray-600 text-base sm:text-lg px-2">
-                        We are here to help you with any questions or concerns you may have.
-                    </p>
+                    <AnimatedText>
+                        <h1 className="text-3xl sm:text-4xl font-bold mb-2 bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 text-transparent bg-clip-text p-1">
+                            Find Our Nearest Dealers
+                        </h1>
+
+                        <p className="text-gray-600 text-base sm:text-lg px-2">
+                            We are here to help you with any questions or concerns you may have.
+                        </p>
+                    </AnimatedText>
                 </div>
 
                 <div className="bg-pink-100 rounded-md border-pink-100 overflow-hidden shadow-md">
