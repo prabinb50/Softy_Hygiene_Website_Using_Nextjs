@@ -23,7 +23,7 @@ export default function MobileNav({ isMenuOpen, toggleMenu, isActive }: MobileNa
 
             {/* Mobile menu - only shows when menu is open */}
             {isMenuOpen && (
-                <div className="absolute top-full left-0 right-0 bg-gradient-to-r from-purple-700 to-pink-600 md:hidden flex flex-col w-full shadow-lg">
+                <div className="absolute top-full left-0 right-0 bg-gradient-to-r from-purple-700 to-pink-600 lg:hidden flex flex-col w-full shadow-lg">
                     <Link href="/" className={`text-white font-medium p-4 border-b border-purple-500 hover:bg-purple-800 ${isActive('/') ? 'bg-purple-900' : ''}`} onClick={toggleMenu}>
                         Home
                     </Link>
