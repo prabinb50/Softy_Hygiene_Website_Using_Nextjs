@@ -1,5 +1,7 @@
 "use client"
 import BannerImage from '@/components/website/BannerImage';
+import { DealerList } from '@/components/website/DealerList';
+import { DealerMap } from '@/components/website/DealerMap';
 import React, { useState, useEffect } from 'react';
 
 // Define Dealer interface for type safety
@@ -19,18 +21,28 @@ const dealers: Dealer[] = [
     { name: 'Prasansa Store', location: 'Malekhu', mapUrl: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d225856.93746766343!2d84.830096!3d27.80932!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3994d63937f0b085%3A0xdd9e20908ba3940!2sMalekhu%2C%20Benighat%2045100!5e0!3m2!1sen!2snp!4v1745318308325!5m2!1sen!2snp' },
     { name: 'Aarav Suppliers', location: 'Trishuli', mapUrl: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d225211.72943842734!2d84.917274!3d28.118064!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3995204ceea6a129%3A0xe1f5cc8ca30e0b91!2sTrishuli!5e0!3m2!1sen!2snp!4v1745318352517!5m2!1sen!2snp' },
     { name: 'Joti Suppliers And Traders', location: 'Khotang', mapUrl: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d227200.23030456423!2d86.705691!3d27.156177!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e933bb4310e10d%3A0xf901dbd37f9a63b7!2sKhotang!5e0!3m2!1sen!2snp!4v1745318386652!5m2!1sen!2snp' },
+    { name: 'New shivam Traders', location: 'Hetauda', mapUrl: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d226459.13219125647!2d85.032449!3d27.428706!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb5e583ef3e35d%3A0xa4676223adb8754c!2sHetauda!5e0!3m2!1sen!2snp!4v1745318420000!5m2!1sen!2snp' },
+    { name: 'Nirantar suppliers', location: 'Sukedhara', mapUrl: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d226133.73933293214!2d85.344607!3d27.578681!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1981d9a87549%3A0xb5dc82a78df698ce!2sSukedhara%2C%20Kathmandu%2044600!5e0!3m2!1sen!2snp!4v1745318450000!5m2!1sen!2snp' },
+    { name: 'Prince Trade Center', location: 'Bhairahawa', mapUrl: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d226996.10251402298!2d83.453811!3d27.505607!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3996864275d9755f%3A0x2b1e92d89d4bb3ae!2sBhairahawa%2C%20Siddharthanagar!5e0!3m2!1sen!2snp!4v1745318480000!5m2!1sen!2snp' },
+    { name: 'Puja Shringar', location: 'Naryangarh', mapUrl: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d226670.3734219651!2d84.428111!3d27.685681!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3994e5c336b86399%3A0x9c10268847c83634!2sNarayangarh%2044200!5e0!3m2!1sen!2snp!4v1745318510000!5m2!1sen!2snp' },
+    { name: 'R.S. Traders', location: 'Birgunj', mapUrl: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d226882.64821243662!2d84.877328!3d27.016228!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39935446b21c99c3%3A0x45656a847bcde89d!2sBirgunj%2044300!5e0!3m2!1sen!2snp!4v1745318540000!5m2!1sen!2snp' },
+    { name: 'Radhe Radhe Suppliers', location: 'Gulariya', mapUrl: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d227127.24151934302!2d81.348865!3d28.209547!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a20c716088e4c5%3A0xa5e8c17f5fe8d638!2sGulariya%2021800!5e0!3m2!1sen!2snp!4v1745318570000!5m2!1sen!2snp' },
+    { name: 'Radhika Traders', location: 'Birtamod', mapUrl: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d227672.19048533635!2d87.941343!3d26.642204!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e59d1414ce0755%3A0xc494de0a08969a2d!2sBirtamode%2057204!5e0!3m2!1sen!2snp!4v1745318600000!5m2!1sen!2snp' }
 ];
 
 export default function DealerLocatorPage() {
-    // State to track the selected dealer
+    // State variables for managing dealer data and selected dealer
     const [selectedDealer, setSelectedDealer] = useState<Dealer>(dealers[0]);
-    // State to store sorted dealers
     const [sortedDealers, setSortedDealers] = useState<Dealer[]>(dealers);
 
-    // Initialize the map height based on screen size
+    // State for pagination
+    const [currentPage, setCurrentPage] = useState(1);
+    const dealersPerPage = 8;
+
+    // State for map height based on window size
     const [mapHeight, setMapHeight] = useState(400);
 
-    // Adjust map height based on screen size
+    // Effect to handle window resize for map height
     useEffect(() => {
         const handleResize = () => {
             if (window.innerWidth <= 640) {
@@ -42,17 +54,13 @@ export default function DealerLocatorPage() {
             }
         };
 
-        // Set initial height
+        // Set initial map height based on window size
         handleResize();
-
-        // Add event listener for window resize
         window.addEventListener('resize', handleResize);
-
-        // Clean up event listener on component unmount
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    // Handler for sorting dealers
+    // Sorting function
     const handleSort = (sortType: string) => {
         const newSortedDealers = [...dealers].sort((a, b) => {
             if (sortType === "name-asc") return a.name.localeCompare(b.name);
@@ -64,16 +72,22 @@ export default function DealerLocatorPage() {
 
         setSortedDealers(newSortedDealers);
         setSelectedDealer(newSortedDealers[0]);
+        setCurrentPage(1);
     };
+
+    // Pagination logic
+    const indexOfLastDealer = currentPage * dealersPerPage;
+    const indexOfFirstDealer = indexOfLastDealer - dealersPerPage;
+    const currentDealers = sortedDealers.slice(indexOfFirstDealer, indexOfLastDealer);
+    const totalPages = Math.ceil(sortedDealers.length / dealersPerPage);
 
     return (
         <div className="min-h-screen flex flex-col">
             {/* Banner Image Component */}
             <BannerImage />
 
-            {/* Main Dealer Locator Container */}
-            <div className="w-full sm:w-11/12 mx-auto py-8 sm:py-12 md:py-15">
-                {/* Title Section */}
+            {/* Main Content Area */}
+            <div className="w-full sm:w-11/12 mx-auto py-8 sm:py-12 md:py-15 px-3 sm:px-0">
                 <div className="text-center mb-8 sm:mb-12">
                     <h1 className="text-3xl sm:text-4xl font-bold mb-2 bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 text-transparent bg-clip-text p-1">
                         Find Our Nearest Dealers
@@ -83,83 +97,28 @@ export default function DealerLocatorPage() {
                     </p>
                 </div>
 
-                {/* Dealer List and Map Container */}
                 <div className="bg-pink-100 rounded-md border-pink-100 overflow-hidden shadow-md">
                     <div className="flex flex-col lg:flex-row gap-4 sm:gap-6">
-                        {/* Dealer List Section */}
-                        <div className="w-full lg:w-1/3 p-3 sm:p-4">
-                            {/* Controls Container */}
-                            <div className="mb-4">
-                                <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
-                                    {/* Dropdown for sorting */}
-                                    <select
-                                        className="w-full p-2 bg-white rounded-md cursor-pointer text-sm sm:text-base"
-                                        onChange={(e) => handleSort(e.target.value)}
-                                    >
-                                        <option value="name-asc">Sort by Name (A-Z)</option>
-                                        <option value="name-desc">Sort by Name (Z-A)</option>
-                                        <option value="location-asc">Sort by Location (A-Z)</option>
-                                        <option value="location-desc">Sort by Location (Z-A)</option>
-                                    </select>
+                        {/* Dealer List Component */}
+                        <DealerList
+                            dealers={dealers}
+                            currentDealers={currentDealers}
+                            selectedDealer={selectedDealer}
+                            setSelectedDealer={setSelectedDealer}
+                            handleSort={handleSort}
+                            setSortedDealers={setSortedDealers}
+                            setCurrentPage={setCurrentPage}
+                            currentPage={currentPage}
+                            totalPages={totalPages}
+                        />
 
-                                    {/* Reset Button */}
-                                    <button
-                                        className="p-2 bg-white rounded-md font-semibold px-4 cursor-pointer hover:bg-yellow-200 transition duration-300 text-sm sm:text-base"
-                                        onClick={() => {
-                                            setSortedDealers(dealers);
-                                            setSelectedDealer(dealers[0]);
-                                        }}
-                                    >
-                                        Reset
-                                    </button>
-                                </div>
-                            </div>
-
-                            {/* Dealer List */}
-                            <div className="max-h-[300px] sm:max-h-[350px] md:max-h-[400px] overflow-y-auto pr-1">
-                                <ul className="space-y-2">
-                                    {sortedDealers.map((dealer, index) => (
-                                        <li
-                                            key={index}
-                                            className={`px-3 sm:px-4 py-2 rounded-md cursor-pointer transition-all duration-300 hover:shadow-md ${selectedDealer.name === dealer.name
-                                                ? 'bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 text-white'
-                                                : 'bg-gray-100 hover:bg-gray-200'
-                                                }`}
-                                            onClick={() => setSelectedDealer(dealer)}
-                                        >
-                                            <h3 className="font-semibold text-sm sm:text-base">{dealer.name}</h3>
-                                            <p className="text-xs sm:text-sm">{dealer.location}</p>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        </div>
-
-                        {/* Google Map Container */}
-                        <div className="w-full lg:w-2/3 p-3 sm:p-4">
-                            <div className="rounded-md overflow-hidden shadow-md">
-                                <iframe
-                                    src={selectedDealer.mapUrl}
-                                    width="100%"
-                                    height={mapHeight}
-                                    style={{ border: 0 }}
-                                    allowFullScreen
-                                    loading="lazy"
-                                    referrerPolicy="no-referrer-when-downgrade"
-                                    title={`Map of ${selectedDealer.name} at ${selectedDealer.location}`}
-                                    className="w-full"
-                                ></iframe>
-                            </div>
-
-                            {/* Selected Dealer Info Card */}
-                            <div className="mt-3 bg-white p-3 rounded-md shadow-sm">
-                                <h3 className="font-bold text-lg text-purple-700">{selectedDealer.name}</h3>
-                                <p className="text-gray-600">Location: {selectedDealer.location}</p>
-                            </div>
-                        </div>
+                        {/* Dealer Map Component */}
+                        <DealerMap selectedDealer={selectedDealer} mapHeight={mapHeight} />
                     </div>
                 </div>
             </div>
         </div>
     );
 }
+
+
