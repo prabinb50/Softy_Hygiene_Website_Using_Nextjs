@@ -4,6 +4,7 @@ import "./globals.css";
 
 import Footer from "@/components/website/Footer";
 import Navbar from "@/components/website/Navbar";
+import ScrollToTopArrow from "@/components/website/ScrollToTopArrowComponent";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +33,7 @@ export default function RootLayout({
       >
         <Navbar></Navbar>
         {children}
+        <ScrollToTopArrow></ScrollToTopArrow>
         <Footer></Footer>
       </body>
     </html>
