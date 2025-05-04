@@ -178,7 +178,7 @@ export default function Footer() {
                     </div>
                     <div className="mt-3 md:mt-0 flex items-center space-x-1 sm:space-x-2 text-sm sm:text-base text-center">
                         <p>Designed and Developed by</p>
-                        <Link href="https://zyluxitsolution.com/" className="underline hover:text-pink-200 transition-colors">Zylux IT Solution</Link>
+                        <Link href="https://github.com/prabinb50" className="underline hover:text-pink-200 transition-colors">Prabin Joshi</Link>
                     </div>
                 </div>
             </div>
