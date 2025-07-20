@@ -67,7 +67,7 @@ export default function ContactPage() {
                                             </div>
                                             {/* Text  */}
                                             <p className="text-sm text-gray-600 hover:bg-gradient-to-r from-purple-600 via-pink-500 to-purple-600 hover:text-transparent hover:bg-clip-text cursor-pointer">
-                                                Maitighar, Kathmandu, Nepal (NP).
+                                               Kathmandu, Nepal (NP).
                                             </p>
                                         </div>
                                     </div>
