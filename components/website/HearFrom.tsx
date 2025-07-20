@@ -47,7 +47,7 @@ export default function HearFrom() {
                                         products—we strive to enrich lives through care, comfort, and
                                         trust. For over a decade, our journey has been driven by one
                                         simple vision: to make hygiene a reliable companion in every
-                                        individual's life.
+                                        individual&apos;s life.
                                     </p>
                                 </AnimatedText>
 

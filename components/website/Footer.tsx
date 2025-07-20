@@ -176,7 +176,7 @@ export default function Footer() {
                     <AnimatedCard delay={0.4}>
                         <div className="text-white text-center sm:text-left">
                             <p className="text-sm sm:text-base font-semibold leading-relaxed px-4 sm:px-0">
-                                "As action speaks louder than words." We SOFTY HYGIENE PVT.LTD. is one of the largest private level manufacturing company of disposable wet wipes, Baby wipes, Baby Diaper, Sanitary Napkins and Tissue paper. We ensure feminine care and baby care for their safety and comfort. So, we specially manufacture our product in women and Baby base.
+                                &quot;As action speaks louder than words.&quot; We SOFTY HYGIENE PVT.LTD. is one of the largest private level manufacturing company of disposable wet wipes, Baby wipes, Baby Diaper, Sanitary Napkins and Tissue paper. We ensure feminine care and baby care for their safety and comfort. So, we specially manufacture our product in women and Baby base.
                             </p>
                         </div>
                     </AnimatedCard>
