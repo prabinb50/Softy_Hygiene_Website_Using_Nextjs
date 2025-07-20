@@ -1,6 +1,6 @@
 ﻿# Softy Hygiene Website
 
-This repository contains the **Softy Hygiene Website**, a modern and responsive frontend web application built using **Next.js**, **Tailwind CSS**, **ShadCN UI**, and **TypeScript**. The website showcases Softy Hygiene's products, categories, dealer locator, and contact information, providing a seamless user experience.
+This repository contains the **Softy Hygiene Website**, a modern and responsive frontend web application built using **Next.js**, **Tailwind CSS**, **ShadCN UI**, and **TypeScript**. The website showcases Softy Hygiene's products, categories, dealer locator, about section, and contact information, providing a seamless user experience.
 
 
 ## Table of Contents
@@ -13,7 +13,7 @@ This repository contains the **Softy Hygiene Website**, a modern and responsive 
 
 ## Features
 
-- **Dynamic Pages**: Includes pages for products, categories, dealer locator, and contact information.
+- **Dynamic Pages**: Includes pages for products, categories, dealer locator, about section, and contact information.
 - **Responsive Design**: Fully optimized for desktop, tablet, and mobile devices.
 - **Interactive Components**: Carousel, navigation bar, and dealer locator with sorting functionality.
 - **Modern UI**: Built with ShadCN UI and Tailwind CSS for a clean and professional look.
