@@ -15,7 +15,7 @@ export default function HearFrom() {
                             <div className="flex justify-center p-4">
                                 <div className="relative w-full max-w-sm h-[300px] sm:h-[400px]">
                                     <Image
-                                        src="/Prabin_joshi.jpg"
+                                        src="/Prabin_Joshi.jpg"
                                         alt="Chairperson Prabin Joshi"
                                         fill
                                         sizes="(max-width: 768px) 100vw, 400px"
