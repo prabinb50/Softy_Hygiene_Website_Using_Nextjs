@@ -1,5 +1,6 @@
 import React from 'react';
 import { Heart, Shield, Leaf } from 'lucide-react';
+import { AnimatedText, AnimatedCard, AnimatedFade } from '@/components/website/AnimationComponents';
 
 // define product interface for type safety
 interface Product {
@@ -40,45 +41,54 @@ export default function ProductSection() {
         <div className="w-full py-8 sm:py-16">
             <div className="mx-auto">
                 {/* products section header */}
-                <div className="w-full mb-8 sm:mb-12">
-                    <div className="max-w-7xl mx-auto px-4 text-center">
-                        <div>
-                            {/* subtitle */}
-                            <p className="text-pink-500 font-medium text-base sm:text-lg">Our Products</p>
+                <AnimatedFade>
+                    <div className="w-full mb-8 sm:mb-12">
+                        <div className="max-w-7xl mx-auto px-4 text-center">
+                            <div>
+                                {/* subtitle */}
+                                <AnimatedText delay={0.1}>
+                                    <p className="text-pink-500 font-medium text-base sm:text-lg">Our Products</p>
+                                </AnimatedText>
 
-                            {/* main title with gradient */}
-                            <h2 className="text-2xl sm:text-3xl font-semibold bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent p-2">
-                                Comprehensive Hygiene Solutions
-                            </h2>
+                                {/* main title with gradient */}
+                                <AnimatedText delay={0.2}>
+                                    <h2 className="text-2xl sm:text-3xl font-semibold bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent p-2">
+                                        Comprehensive Hygiene Solutions
+                                    </h2>
+                                </AnimatedText>
 
-                            {/* description */}
-                            <p className="text-gray-600 text-sm sm:text-md max-w-3xl mx-auto">
-                                We specialize in manufacturing a wide range of hygiene products
-                                designed with care and precision for ultimate comfort and
-                                protection.
-                            </p>
+                                {/* description */}
+                                <AnimatedText delay={0.3}>
+                                    <p className="text-gray-600 text-sm sm:text-md max-w-3xl mx-auto">
+                                        We specialize in manufacturing a wide range of hygiene products
+                                        designed with care and precision for ultimate comfort and
+                                        protection.
+                                    </p>
+                                </AnimatedText>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </AnimatedFade>
 
                 {/* product cards grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                     {products.map((product, index) => (
-                        <div
-                            key={index}
-                            className={`rounded-2xl p-6 sm:p-8 bg-gradient-to-br ${product.bgColor} shadow-sm hover:shadow-md transition-shadow duration-300`}>
-                            <div className={`${product.iconBg} w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mb-4 sm:mb-6 mx-auto`}>
-                                {product.icon}
+                        <AnimatedCard key={index} delay={0.4 + (index * 0.1)}>
+                            <div
+                                className={`rounded-2xl p-6 sm:p-8 bg-gradient-to-br ${product.bgColor} shadow-sm hover:shadow-md transition-shadow duration-300`}>
+                                <div className={`${product.iconBg} w-12 h-12 sm:w-16 sm:h-16 rounded-full flex items-center justify-center mb-4 sm:mb-6 mx-auto`}>
+                                    {product.icon}
+                                </div>
+
+                                <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-3 sm:mb-4 text-center">
+                                    {product.title}
+                                </h3>
+
+                                <p className="text-gray-600 text-sm sm:text-base text-center">
+                                    {product.description}
+                                </p>
                             </div>
-
-                            <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-3 sm:mb-4 text-center">
-                                {product.title}
-                            </h3>
-
-                            <p className="text-gray-600 text-sm sm:text-base text-center">
-                                {product.description}
-                            </p>
-                        </div>
+                        </AnimatedCard>
                     ))}
                 </div>
             </div>
